@@ -19,7 +19,7 @@ LICENSE="GPL-3+"
 
 SLOT="0"
 
-KEYWORDS="x86 x86_64"
+KEYWORDS="x86 amd64"
 
 IUSE=""
 
