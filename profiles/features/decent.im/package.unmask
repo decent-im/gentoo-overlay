@@ -1,3 +1,10 @@
-*/*::lua
-*/*::mva
+#*/*::lua
+#*/*::mva
+app-eselect/*
+dev-lang/lua
+virtual/lua
+dev-lua/*
+net-im/*
+
+
 app-crypt/letsencrypt

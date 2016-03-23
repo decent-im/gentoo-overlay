@@ -1,5 +1,11 @@
-*/*::lua **
-*/*::mva **
+#*/*::lua **
+#*/*::mva **
+
+app-eselect/* **
+dev-lang/lua **
+virtual/lua **
+dev-lua/* **
+net-im/* **
 
 dev-libs/log4cxx **
 x11-plugins/pidgin-skypeweb **

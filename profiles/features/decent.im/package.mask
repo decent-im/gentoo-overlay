@@ -1,2 +1,2 @@
-dev-lang/lua::gentoo
-dev-lua/lua-zlib::gentoo
+#dev-lang/lua::gentoo
+#dev-lua/lua-zlib::gentoo
