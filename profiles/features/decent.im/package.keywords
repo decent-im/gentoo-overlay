@@ -3,3 +3,4 @@
 
 dev-libs/log4cxx **
 x11-plugins/pidgin-skypeweb **
+app-crypt/letsencrypt **
