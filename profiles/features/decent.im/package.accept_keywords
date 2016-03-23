@@ -104,3 +104,4 @@ dev-lua/luasocket **
 dev-lua/luaexpat **
 dev-lua/luafilesystem **
 dev-lua/luaevent **
+dev-lua/luadbi **
