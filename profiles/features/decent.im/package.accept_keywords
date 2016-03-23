@@ -100,3 +100,6 @@ dev-lua/linotify **
 # required by net-im/decent-im-9999::decent-im
 # required by decent-im (argument)
 dev-lua/luasocket **
+
+dev-lua/luaexpat **
+dev-lua/luafilesystem **
