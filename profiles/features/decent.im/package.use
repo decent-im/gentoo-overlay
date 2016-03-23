@@ -1,0 +1,14 @@
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+net-im/prosody luajit
+# required by dev-lua/lua-zlib-9999::lua
+# required by net-im/prosody-9999::lua[zlib]
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+virtual/lua luajit
+# required by net-im/prosody-9999::lua[zlib]
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+dev-lua/lua-zlib luajit
+
+net-im/prosody-modules luajit
