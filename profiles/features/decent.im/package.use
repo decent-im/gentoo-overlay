@@ -5,7 +5,7 @@ net-im/prosody luajit
 # required by net-im/prosody-9999::lua[zlib]
 # required by net-im/decent-im-9999::decent-im
 # required by decent-im (argument)
-virtual/lua luajit
+virtual/lua luajit bit
 # required by net-im/prosody-9999::lua[zlib]
 # required by net-im/decent-im-9999::decent-im
 # required by decent-im (argument)
