@@ -1,11 +1,9 @@
 #*/*::lua **
 #*/*::mva **
 
-app-eselect/* **
-dev-lang/lua **
-virtual/lua **
-dev-lua/* **
-net-im/* **
+#app-eselect/* **
+#dev-lua/* **
+#net-im/* **
 
 dev-libs/log4cxx **
 x11-plugins/pidgin-skypeweb **
@@ -45,3 +43,60 @@ app-crypt/letsencrypt **
 # required by net-im/decent-im-9999::decent-im
 # required by decent-im (argument)
 =dev-python/pyrfc3339-1.0 ~amd64
+
+dev-lang/lua **
+virtual/lua **
+
+# required by virtual/lua-5::lua[luajit]
+# required by dev-lua/lua-zlib-9999::lua
+# required by net-im/prosody-9999::lua[zlib]
+# required by net-im/prosody-modules-9999::lua
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+app-eselect/eselect-luajit **
+# required by net-im/spectrum-9999::mva
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+net-im/swiften **
+# required by net-im/prosody-modules-9999::lua[prosody_modules_auth_external]
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+dev-lua/lpc **
+# required by net-im/prosody-9999::lua[ssl]
+# required by net-im/prosody-modules-9999::lua
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+dev-lua/luasec **
+# required by net-im/prosody-9999::lua[zlib]
+# required by net-im/prosody-modules-9999::lua
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+dev-lua/lua-zlib **
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+net-im/prosody **
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+net-im/prosody-modules **
+# required by dev-lang/lua-5.1.5-r101::lua
+# required by dev-lua/lpc-9999::lua[lua_targets_lua51]
+# required by net-im/prosody-modules-9999::lua[prosody_modules_auth_external]
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+app-eselect/eselect-lua **
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+net-im/spectrum **
+# required by net-im/spectrum-9999::mva[irc]
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+net-im/libcommuni **
+# required by net-im/prosody-modules-9999::lua[prosody_modules_inotify_reload]
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+dev-lua/linotify **
+# required by net-im/prosody-9999::lua
+# required by net-im/prosody-modules-9999::lua
+# required by net-im/decent-im-9999::decent-im
+# required by decent-im (argument)
+dev-lua/luasocket **
