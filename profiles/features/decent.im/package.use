@@ -12,3 +12,5 @@ virtual/lua luajit
 dev-lua/lua-zlib luajit
 
 net-im/prosody-modules luajit
+
+net-im/pidgin -xscreensaver
