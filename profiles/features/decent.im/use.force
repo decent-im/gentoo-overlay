@@ -1,6 +1,2 @@
 postgres
 lua_targets_lua51
-lua_targets_lua52
-lua_targets_lua53
-lua_targets_luajit
-lua_targets_luajit2
