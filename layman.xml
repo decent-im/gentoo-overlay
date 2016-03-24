@@ -2,7 +2,7 @@
 
 <repositories version="1.0">
 	<repo priority="50" quality="experimental" status="unofficial">
-		<name>decent.im</name>
+		<name>decent-im</name>
 		<description>decent.im distribution helping overlay</description>
 		<homepage>https://github.com/decent-im/gentoo-overlay</homepage>
 		<owner>
