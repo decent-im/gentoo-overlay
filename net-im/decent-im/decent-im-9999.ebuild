@@ -33,8 +33,3 @@ www-servers/nginx
 app-crypt/letsencrypt
 dev-db/postgresql
 "
-
-pkg_setup() {
-	enewgroup decent.im
-	enewuser decent.im -1 -1 -1 decent.im
-}
