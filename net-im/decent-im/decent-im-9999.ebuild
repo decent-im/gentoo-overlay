@@ -33,3 +33,27 @@ www-servers/nginx
 app-crypt/letsencrypt
 dev-db/postgresql
 "
+
+pkg_postinst() {
+	elog
+	elog "To finish configuration of new setup, execute:"
+	elog "    emerge --config =${CATEGORY}/${PF}"
+}
+
+pkg_config() {
+	einfo "Updating rc to start postgresql-9.5, prosody, spectrum on default runlevel ..."
+	rc-update add postgresql-9.5 default
+	rc-update add prosody default
+	rc-update add spectrum default
+
+	einfo "Generating and populating TLS certs ..."
+	decent.im_letsencrypt
+
+	einfo "Creating databases and access credentials for Prosody and Spectrum ..."
+	service postgresql-9.5 start
+	decent.im_create_db_pg
+
+	einfo "Starting Prosody and Spectrum ..."
+	service prosody start
+	service spectrum start
+}
