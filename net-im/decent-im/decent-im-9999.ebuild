@@ -50,7 +50,6 @@ pkg_config() {
 	decent.im_letsencrypt
 
 	einfo "Creating databases and access credentials for Prosody and Spectrum ..."
-	service postgresql-9.5 start
 	decent.im_create_db_pg
 
 	einfo "Starting Prosody and Spectrum ..."
