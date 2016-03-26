@@ -46,6 +46,12 @@ pkg_config() {
 	rc-update add prosody default
 	rc-update add spectrum default
 
+	einfo "Generating decent.im config ..."
+	decent.im_configure
+
+	einfo "Processing software config templates ..."
+	decent.im_process_templates
+
 	einfo "Generating and populating TLS certs ..."
 	decent.im_letsencrypt
 
