@@ -33,6 +33,7 @@ www-servers/nginx
 app-crypt/letsencrypt
 dev-db/postgresql
 net-dns/bind-tools
+app-portage/smart-live-rebuild
 "
 
 pkg_postinst() {
