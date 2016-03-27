@@ -64,3 +64,4 @@ net-im/prosody-modules prosody_modules_tls_policy prosody_modules_turncredential
 net-im/prosody-modules prosody_modules_webpresence
 
 dev-libs/openssl -bindist
+net-misc/openssh -bindist
