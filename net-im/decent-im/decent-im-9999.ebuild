@@ -32,6 +32,7 @@ RDEPEND="=net-im/prosody-9999
 www-servers/nginx
 app-crypt/letsencrypt
 dev-db/postgresql
+net-dns/bind-tools
 "
 
 pkg_postinst() {
