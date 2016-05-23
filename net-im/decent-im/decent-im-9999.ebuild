@@ -30,7 +30,7 @@ RDEPEND="=net-im/prosody-9999
 =net-im/prosody-modules-9999
 =net-im/spectrum-9999
 www-servers/nginx
-app-crypt/letsencrypt
+app-crypt/certbot
 dev-db/postgresql
 net-dns/bind-tools
 app-portage/smart-live-rebuild
