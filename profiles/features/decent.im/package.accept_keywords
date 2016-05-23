@@ -105,3 +105,7 @@ dev-lua/luaexpat **
 dev-lua/luafilesystem **
 dev-lua/luaevent **
 dev-lua/luadbi **
+
+app-crypt/certbot **
+# required by app-crypt/certbot-9999::gentoo
+dev-python/cryptography **
