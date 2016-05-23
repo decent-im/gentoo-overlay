@@ -13,7 +13,7 @@ dev-lua/lua-zlib luajit
 
 net-im/prosody-modules luajit
 
-net-im/pidgin -xscreensaver
+net-im/pidgin -xscreensaver gnutls
 
 net-im/spectrum debug libev purple skype smstools symlinks tools twitter irc migration
 net-im/libcommuni qt4

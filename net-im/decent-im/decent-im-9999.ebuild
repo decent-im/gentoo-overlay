@@ -29,6 +29,8 @@ DEPEND=""
 RDEPEND="=net-im/prosody-9999
 =net-im/prosody-modules-9999
 =net-im/spectrum-9999
+net-im/pidgin
+x11-plugins/purple-facebook
 www-servers/nginx
 app-crypt/certbot
 dev-db/postgresql
