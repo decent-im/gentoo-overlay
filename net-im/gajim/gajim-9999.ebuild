@@ -5,7 +5,7 @@
 EAPI=5
 EHG_REPO_URI="https://hg.gajim.org/gajim"
 
-PYTHON_COMPAT=( python3_{3,4,5} )
+PYTHON_COMPAT=( python3_5 )
 PYTHON_REQ_USE="sqlite,xml"
 
 AUTOTOOLS_AUTORECONF=true
