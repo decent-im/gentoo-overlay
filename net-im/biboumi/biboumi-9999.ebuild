@@ -18,7 +18,7 @@ dev-libs/expat
 virtual/libiconv
 net-dns/libidn
 net-dns/c-ares
-net-libs/botan
+<=net-libs/botan-1.11.33
 dev-db/litesql
 "
 RDEPEND="${DEPEND}"
