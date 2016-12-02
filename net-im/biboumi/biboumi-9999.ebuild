@@ -16,7 +16,6 @@ IUSE=""
 DEPEND="
 dev-libs/expat
 virtual/libiconv
-sys-libs/libuuid
 net-dns/libidn
 net-dns/c-ares
 net-libs/botan
