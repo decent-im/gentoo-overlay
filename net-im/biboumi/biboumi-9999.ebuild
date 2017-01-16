@@ -14,13 +14,13 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="
-dev-libs/expat
-virtual/libiconv
-net-dns/libidn
-net-dns/c-ares
-<=net-libs/botan-1.11.33
 dev-db/litesql
+dev-libs/expat
+net-dns/c-ares
+net-dns/libidn
+<=net-libs/botan-1.11.33
 net-libs/udns
+virtual/libiconv
 "
 RDEPEND="${DEPEND}"
 
