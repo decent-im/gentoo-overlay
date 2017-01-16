@@ -20,6 +20,7 @@ net-dns/libidn
 net-dns/c-ares
 <=net-libs/botan-1.11.33
 dev-db/litesql
+net-libs/udns
 "
 RDEPEND="${DEPEND}"
 
