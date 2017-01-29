@@ -18,7 +18,7 @@ dev-db/litesql
 dev-libs/expat
 net-dns/c-ares
 net-dns/libidn
-<=net-libs/botan-1.11.33
+net-libs/botan
 net-libs/udns
 virtual/libiconv
 "
