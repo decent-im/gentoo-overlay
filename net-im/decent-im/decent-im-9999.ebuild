@@ -36,6 +36,7 @@ app-crypt/certbot
 dev-db/postgresql
 net-dns/bind-tools
 app-portage/smart-live-rebuild
+sys-apps/kexec-tools
 "
 
 pkg_postinst() {
