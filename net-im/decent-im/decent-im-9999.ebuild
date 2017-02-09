@@ -13,7 +13,7 @@ HOMEPAGE="https://decent.im"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-EGIT_REPO_URI="https://github.com/decent-im/decent.im-gentoo"
+EGIT_REPO_URI="https://github.com/decent-im/decent.im"
 
 LICENSE="GPL-3+"
 
