@@ -17,3 +17,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 inherit git-r3 cmake-utils
+
+mycmakeargs=(
+	-DLITESQL_WITH_POSTGRES=ON
+)
