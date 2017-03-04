@@ -30,13 +30,12 @@ inherit git-r3 cmake-utils
 DIRS="/var/log/biboumi /var/lib/biboumi"
 
 src_install() {
-	default
+	cmake-utils_src_install
 	newinitd "${FILESDIR}/${PN}".initd "${PN}"
 	for dir in $DIRS
 	do
 		keepdir $dir
 	done
-
 }
 
 pkg_postinst() {
