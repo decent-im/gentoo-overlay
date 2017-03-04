@@ -18,6 +18,7 @@ dev-db/litesql
 dev-libs/expat
 net-dns/c-ares
 net-dns/libidn
+net-im/jabber-base
 net-libs/botan
 net-libs/udns
 virtual/libiconv
@@ -25,3 +26,23 @@ virtual/libiconv
 RDEPEND="${DEPEND}"
 
 inherit git-r3 cmake-utils
+
+DIRS="/var/log/biboumi /var/lib/biboumi"
+
+src_install() {
+	default
+	newinitd "${FILESDIR}/${PN}".initd "${PN}"
+	for dir in $DIRS
+	do
+		keepdir $dir
+	done
+
+}
+
+pkg_postinst() {
+	for dir in $DIRS
+	do
+		chown jabber:jabber $dir
+		chown 750 $dir
+	done
+}
