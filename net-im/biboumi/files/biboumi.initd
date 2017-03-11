@@ -8,8 +8,15 @@ command="/usr/bin/biboumi"
 command_args="${BIBOUMI_CONFIG:-/etc/biboumi/biboumi.cfg}"
 command_user="${BIBOUMI_USER:-jabber}"
 command_background="true"
+extra_commands="reload"
 
 depend() {
 	use net
 	use jabber-server
+}
+
+reload() {
+	ebegin "Reloading configuration of Biboumi"
+	start-stop-daemon -p ${pidfile} -s USR1
+	eend $?
 }
