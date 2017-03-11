@@ -32,6 +32,8 @@ DIRS="/var/log/biboumi /var/lib/biboumi"
 src_install() {
 	cmake-utils_src_install
 	newinitd "${FILESDIR}/${PN}".initd "${PN}"
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/${PN}".logrotate "${PN}"
 	for dir in $DIRS
 	do
 		keepdir $dir
