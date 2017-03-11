@@ -44,6 +44,6 @@ pkg_postinst() {
 	for dir in $DIRS
 	do
 		chown jabber:jabber $dir
-		chmod 750 $dir
+		chmod u=rwx,g=rx,o= $dir
 	done
 }
