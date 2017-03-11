@@ -44,6 +44,6 @@ pkg_postinst() {
 	for dir in $DIRS
 	do
 		chown jabber:jabber $dir
-		chown 750 $dir
+		chmod 750 $dir
 	done
 }
