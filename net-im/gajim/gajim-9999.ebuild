@@ -32,12 +32,22 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=sys-devel/gettext-0.17-r1"
 RDEPEND="${COMMON_DEPEND}
+	dev-python/pygobject:3[${PYTHON_USEDEP}]
+	dev-python/protobuf-python[${PYTHON_USEDEP}]
+	dev-python/pycryptodome[${PYTHON_USEDEP}]
+	dev-python/cryptography[${PYTHON_USEDEP}]
+	dev-python/cx_Freeze[${PYTHON_USEDEP}]
+	dev-python/keyring[${PYTHON_USEDEP}]
+	dev-python/pillow[${PYTHON_USEDEP}]
+	dev-python/pycurl[${PYTHON_USEDEP}]
+	dev-python/qrcode[${PYTHON_USEDEP}]
+	dev-python/certifi[${PYTHON_USEDEP}]
 	dev-python/pyasn1[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
 	>=dev-python/python-nbxmpp-0.5.3[${PYTHON_USEDEP}]
 	crypt? (
 		app-crypt/gnupg
-		dev-python/pycrypto[${PYTHON_USEDEP}]
+		dev-python/python-gnupg[${PYTHON_USEDEP}]
 		)
 	dbus? (
 		dev-python/dbus-python[${PYTHON_USEDEP}]
