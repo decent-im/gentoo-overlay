@@ -1,32 +1,28 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
-EHG_REPO_URI="https://hg.gajim.org/gajim"
+EAPI=6
+EGIT_REPO_URI="https://dev.gajim.org/gajim/gajim.git"
 
-PYTHON_COMPAT=( python3_5 )
+PYTHON_COMPAT=( python3_{5,6} )
 PYTHON_REQ_USE="sqlite,xml"
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils python-r1 versionator mercurial
-
-MY_PV=${PV/_/-}
-MY_P="${PN}-${MY_PV}"
+inherit autotools python-r1 versionator git-r3
 
 DESCRIPTION="Jabber client written in PyGTK"
 HOMEPAGE="http://www.gajim.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="avahi crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
+IUSE="crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml zeroconf"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	libnotify? ( dbus )
-	avahi? ( dbus )
-	gnome? ( gnome-keyring )"
+	gnome? ( gnome-keyring )
+	zeroconf? ( dbus )"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -36,7 +32,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=sys-devel/gettext-0.17-r1"
 RDEPEND="${COMMON_DEPEND}
-	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/pyasn1[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
 	>=dev-python/python-nbxmpp-0.5.3[${PYTHON_USEDEP}]
@@ -47,8 +42,8 @@ RDEPEND="${COMMON_DEPEND}
 	dbus? (
 		dev-python/dbus-python[${PYTHON_USEDEP}]
 		dev-libs/dbus-glib
-		libnotify? ( dev-python/notify-python )
-		avahi? ( net-dns/avahi[dbus,gtk,python,${PYTHON_USEDEP}] )
+		libnotify? ( dev-python/notify-python[${PYTHON_USEDEP}] )
+		zeroconf? ( net-dns/avahi[dbus,gtk,python,${PYTHON_USEDEP}] )
 		)
 	gnome? (
 		dev-python/libgnome-python[${PYTHON_USEDEP}]
@@ -56,7 +51,7 @@ RDEPEND="${COMMON_DEPEND}
 		)
 	gnome-keyring? ( dev-python/gnome-keyring-python[${PYTHON_USEDEP}] )
 	idle? ( x11-libs/libXScrnSaver )
-	jingle? ( net-libs/farstream:0.2 )
+	jingle? ( net-libs/farstream:0.2[python,${PYTHON_USEDEP}] )
 	kde? ( kde-apps/kwalletmanager )
 	networkmanager? (
 			dev-python/dbus-python[${PYTHON_USEDEP}]
@@ -73,11 +68,11 @@ RDEPEND="${COMMON_DEPEND}
 
 RESTRICT="test"
 
-S="${WORKDIR}"/${MY_P}
-
 src_prepare() {
 	NO_AUTOTOOLS_RUN=1 ./autogen.sh
 	eautoreconf
+
+	default
 	python_copy_sources
 }
 
@@ -90,14 +85,14 @@ src_configure() {
 			--libdir="$(python_get_sitedir)"
 			--enable-site-packages
 		)
-		run_in_build_dir autotools-utils_src_configure
+		run_in_build_dir default
 	}
 	python_foreach_impl configuration
 }
 
 src_compile() {
 	compilation() {
-		run_in_build_dir autotools-utils_src_compile
+		run_in_build_dir default
 	}
 	python_foreach_impl compilation
 }
@@ -111,7 +106,7 @@ src_test() {
 
 src_install() {
 	installation() {
-		run_in_build_dir autotools-utils_src_install
+		run_in_build_dir default
 		python_optimize
 	}
 	python_foreach_impl installation
