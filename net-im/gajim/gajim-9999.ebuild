@@ -16,11 +16,10 @@ HOMEPAGE="http://www.gajim.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml zeroconf"
+IUSE="crypt dbus gnome gnome-keyring kde idle jingle networkmanager nls spell +srv test X xhtml zeroconf"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
-	libnotify? ( dbus )
 	gnome? ( gnome-keyring )
 	zeroconf? ( dbus )"
 
@@ -51,8 +50,8 @@ RDEPEND="${COMMON_DEPEND}
 		)
 	dbus? (
 		dev-python/dbus-python[${PYTHON_USEDEP}]
+		virtual/notification-daemon
 		dev-libs/dbus-glib
-		libnotify? ( dev-python/notify-python[${PYTHON_USEDEP}] )
 		zeroconf? ( net-dns/avahi[dbus,gtk,python,${PYTHON_USEDEP}] )
 		)
 	gnome? (
