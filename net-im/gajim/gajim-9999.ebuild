@@ -16,11 +16,10 @@ HOMEPAGE="http://www.gajim.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="crypt dbus gnome gnome-keyring kde idle jingle networkmanager nls spell +srv test X xhtml zeroconf"
+IUSE="crypt dbus gnome idle jingle networkmanager nls spell +srv test X xhtml zeroconf"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
-	gnome? ( gnome-keyring )
 	zeroconf? ( dbus )"
 
 COMMON_DEPEND="
@@ -33,14 +32,11 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/protobuf-python[${PYTHON_USEDEP}]
-	dev-python/pycryptodome[${PYTHON_USEDEP}]
+	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/cryptography[${PYTHON_USEDEP}]
-	dev-python/cx_Freeze[${PYTHON_USEDEP}]
-	dev-python/keyring[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/pycurl[${PYTHON_USEDEP}]
 	dev-python/qrcode[${PYTHON_USEDEP}]
-	dev-python/certifi[${PYTHON_USEDEP}]
 	dev-python/pyasn1[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
 	>=dev-python/python-nbxmpp-0.5.3[${PYTHON_USEDEP}]
@@ -58,10 +54,8 @@ RDEPEND="${COMMON_DEPEND}
 		dev-python/libgnome-python[${PYTHON_USEDEP}]
 		dev-python/egg-python[${PYTHON_USEDEP}]
 		)
-	gnome-keyring? ( dev-python/gnome-keyring-python[${PYTHON_USEDEP}] )
 	idle? ( x11-libs/libXScrnSaver )
 	jingle? ( net-libs/farstream:0.2[python,${PYTHON_USEDEP}] )
-	kde? ( kde-apps/kwalletmanager )
 	networkmanager? (
 			dev-python/dbus-python[${PYTHON_USEDEP}]
 			net-misc/networkmanager
