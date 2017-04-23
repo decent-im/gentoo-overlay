@@ -69,9 +69,12 @@ pkg_config() {
 }
 
 pkg_preinst() {
-	if [[ -e "$ROOT/etc/decent.im/config" ]]
+	if ! [[ -e "$ROOT/etc/decent.im/config" ]]
 	then
-		einfo "Processing software config templates ..."
-		"$D"/sbin/decent.im_process_templates "$ROOT" "$D"
+		einfo "Generating decent.im config ..."
+		"$D"/sbin/decent.im_configure "$D"/etc/decent.im/config
 	fi
+
+	einfo "Processing software config templates ..."
+	"$D"/sbin/decent.im_process_templates "$ROOT" "$D"
 }
