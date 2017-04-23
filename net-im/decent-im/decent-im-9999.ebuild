@@ -67,3 +67,11 @@ pkg_config() {
 	service prosody start
 	service spectrum start
 }
+
+pkg_preinst() {
+	if [[ -e "$ROOT/etc/decent.im/config" ]]
+	then
+		einfo "Processing software config templates ..."
+		"$D"/sbin/decent.im_process_templates "$ROOT" "$D"
+	fi
+}
