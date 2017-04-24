@@ -26,5 +26,8 @@ else
 fi
 
 src_configure() {
-	${S}/configure.py --destdir=${D}/usr
+	${S}/configure.py \
+		--destdir=${D}/usr \
+		--prefix=/usr \
+		;
 }
