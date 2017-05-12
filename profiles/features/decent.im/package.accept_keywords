@@ -109,6 +109,7 @@ dev-lua/luadbi **
 app-crypt/certbot **
 # required by app-crypt/certbot-9999::gentoo
 dev-python/cryptography **
+dev-python/asn1crypto **
 
 x11-plugins/purple-facebook **
 
