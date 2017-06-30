@@ -8,42 +8,6 @@
 dev-libs/log4cxx **
 x11-plugins/pidgin-skypeweb **
 
-app-crypt/letsencrypt **
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=dev-python/zope-component-4.2.2 ~amd64
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=dev-python/pythondialog-3.3.0-r200 ~amd64
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=app-crypt/acme-9999 **
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=dev-python/configargparse-0.10.0 ~amd64
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=dev-python/parsedatetime-2.1 ~amd64
-# required by dev-python/zope-component-4.2.2::gentoo
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=dev-python/zope-event-4.2.0 ~amd64
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=dev-python/psutil-4.0.0 ~amd64
-# required by app-crypt/acme-9999::gentoo
-# required by app-crypt/letsencrypt-9999::gentoo
-# required by net-im/decent-im-9999::decent-im
-# required by decent-im (argument)
-=dev-python/pyrfc3339-1.0 ~amd64
-
 dev-lang/lua **
 virtual/lua **
 
@@ -106,10 +70,10 @@ dev-lua/luafilesystem **
 dev-lua/luaevent **
 dev-lua/luadbi **
 
-app-crypt/certbot **
-# required by app-crypt/certbot-9999::gentoo
-dev-python/cryptography **
-dev-python/asn1crypto **
+# Unmask app-crypt/certbot, but not -9999 which is troublesome because of
+# sudden dependencies changes
+app-crypt/certbot ~amd64
+app-crypt/acme ~amd64
 
 x11-plugins/purple-facebook **
 
