@@ -3,8 +3,8 @@
 
 EAPI=6
 
-DESCRIPTION=""
-HOMEPAGE=""
+DESCRIPTION="Crypto and TLS for C++11"
+HOMEPAGE="https://botan.randombit.net"
 
 LICENSE="BSD-2"
 SLOT="0"
