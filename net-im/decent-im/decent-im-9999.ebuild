@@ -37,6 +37,7 @@ dev-db/postgresql
 net-dns/bind-tools
 app-portage/smart-live-rebuild
 sys-apps/kexec-tools
+net-misc/ntp
 "
 
 pkg_postinst() {
@@ -46,10 +47,14 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	einfo "Updating rc to start postgresql-9.5, prosody, spectrum on default runlevel ..."
+	einfo "Updating rc to start ntpd, postgresql-9.5, prosody, spectrum on default runlevel ..."
 	rc-update add postgresql-9.5 default
 	rc-update add prosody default
 	rc-update add spectrum default
+	rc-update add ntpd default
+
+	einfo "Starting ntpd ..."
+	service ntpd start
 
 	einfo "Generating decent.im config ..."
 	decent.im_configure
