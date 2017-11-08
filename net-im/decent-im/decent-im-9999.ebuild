@@ -40,6 +40,10 @@ sys-apps/kexec-tools
 net-misc/ntp
 "
 
+src_install() {
+	make install DESTDIR=/usr
+}
+
 pkg_postinst() {
 	elog
 	elog "To finish configuration of new setup, execute:"

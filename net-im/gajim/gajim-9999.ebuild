@@ -7,9 +7,7 @@ EGIT_REPO_URI="https://dev.gajim.org/gajim/gajim.git"
 PYTHON_COMPAT=( python3_{5,6} )
 PYTHON_REQ_USE="sqlite,xml"
 
-AUTOTOOLS_AUTORECONF=true
-
-inherit autotools python-r1 versionator git-r3
+inherit git-r3 distutils-r1
 
 DESCRIPTION="Jabber client written in PyGTK"
 HOMEPAGE="http://www.gajim.org/"
@@ -70,47 +68,3 @@ RDEPEND="${COMMON_DEPEND}
 	xhtml? ( dev-python/docutils[${PYTHON_USEDEP}] )"
 
 RESTRICT="test"
-
-src_prepare() {
-	NO_AUTOTOOLS_RUN=1 ./autogen.sh
-	eautoreconf
-
-	default
-	python_copy_sources
-}
-
-src_configure() {
-	configuration() {
-		local myeconfargs=(
-			$(use_enable nls)
-			$(use_with X x)
-			--docdir="/usr/share/doc/${PF}"
-			--libdir="$(python_get_sitedir)"
-			--enable-site-packages
-		)
-		run_in_build_dir default
-	}
-	python_foreach_impl configuration
-}
-
-src_compile() {
-	compilation() {
-		run_in_build_dir default
-	}
-	python_foreach_impl compilation
-}
-
-src_test() {
-	testing() {
-		run_in_build_dir ${PYTHON} test/runtests.py --verbose 3 || die
-	}
-	python_foreach_impl testing
-}
-
-src_install() {
-	installation() {
-		run_in_build_dir default
-		python_optimize
-	}
-	python_foreach_impl installation
-}
