@@ -41,7 +41,7 @@ net-misc/ntp
 "
 
 src_install() {
-	make install DESTDIR=/usr
+	make install DESTDIR=${D}/usr
 }
 
 pkg_postinst() {
