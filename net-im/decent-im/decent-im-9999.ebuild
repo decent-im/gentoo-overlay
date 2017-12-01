@@ -58,7 +58,7 @@ pkg_config() {
 	rc-update add ntpd default
 
 	einfo "Starting ntpd ..."
-	service ntpd start
+	rc-service ntpd start
 
 	einfo "Generating decent.im config ..."
 	decent.im_configure
@@ -73,8 +73,8 @@ pkg_config() {
 	decent.im_create_db_pg
 
 	einfo "Starting Prosody and Spectrum ..."
-	service prosody start
-	service spectrum start
+	rc-service prosody start
+	rc-service spectrum start
 }
 
 pkg_preinst() {
