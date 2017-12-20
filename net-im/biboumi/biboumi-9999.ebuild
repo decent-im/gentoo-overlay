@@ -11,7 +11,7 @@ EGIT_REPO_URI="git://git.louiz.org/biboumi.git"
 LICENSE="zlib"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="postgres sqlite"
 
 DEPEND="
 dev-db/litesql
@@ -22,12 +22,25 @@ net-im/jabber-base
 net-libs/botan
 net-libs/udns
 virtual/libiconv
+postgres? ( dev-db/postgresql )
+sqlite? ( dev-db/sqlite )
 "
 RDEPEND="${DEPEND}"
 
 inherit git-r3 cmake-utils
 
 DIRS="/var/log/biboumi /var/lib/biboumi"
+
+src_configure() {
+	local mycmakeargs=(
+		-DWITH_POSTGRESQL="$(usex postgres)"
+		-DWITHOUT_POSTGRESQL="$(usex !postgres)"
+		-DWITH_SQLITE3="$(usex sqlite)"
+		-DWITHOUT_SQLITE3="$(usex !sqlite)"
+	)
+
+	cmake-utils_src_configure
+}
 
 src_install() {
 	cmake-utils_src_install
