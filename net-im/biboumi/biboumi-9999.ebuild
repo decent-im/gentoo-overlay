@@ -14,7 +14,6 @@ KEYWORDS=""
 IUSE="postgres sqlite"
 
 DEPEND="
-dev-db/litesql
 dev-libs/expat
 net-dns/c-ares
 net-dns/libidn
