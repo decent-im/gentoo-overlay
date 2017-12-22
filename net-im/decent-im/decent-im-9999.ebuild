@@ -46,9 +46,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
-	elog "To finish configuration of new setup, execute:"
-	elog "    emerge --config =${CATEGORY}/${PF}"
+	if ! [[ -e "$ROOT/etc/decent.im/config" ]] ; then
+		elog
+		elog "To finish configuration of new setup, execute:"
+		elog "    emerge --config =${CATEGORY}/${PF}"
+	fi
 }
 
 pkg_config() {
