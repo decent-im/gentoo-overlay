@@ -29,6 +29,7 @@ DEPEND=""
 RDEPEND="=net-im/prosody-9999
 =net-im/prosody-modules-9999
 =net-im/spectrum-9999
+=net-im/biboumi-9999
 net-im/pidgin
 x11-plugins/purple-facebook
 www-servers/nginx
@@ -55,6 +56,7 @@ pkg_config() {
 	rc-update add postgresql-9.5 default
 	rc-update add prosody default
 	rc-update add spectrum default
+	rc-update add biboumi default
 	rc-update add ntpd default
 
 	einfo "Starting ntpd ..."
@@ -75,6 +77,7 @@ pkg_config() {
 	einfo "Starting Prosody and Spectrum ..."
 	rc-service prosody start
 	rc-service spectrum start
+	rc-service biboumi start
 }
 
 pkg_preinst() {
