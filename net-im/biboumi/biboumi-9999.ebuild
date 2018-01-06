@@ -18,7 +18,7 @@ dev-libs/expat
 net-dns/c-ares
 net-dns/libidn
 net-im/jabber-base
-net-libs/botan
+dev-libs/botan
 net-libs/udns
 virtual/libiconv
 postgres? ( dev-db/postgresql )
