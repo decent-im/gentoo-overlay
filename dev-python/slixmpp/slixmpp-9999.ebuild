@@ -7,7 +7,7 @@ DISTUTILS_SINGLE_IMPL="1"
 
 inherit eutils distutils-r1 git-r3
 
-EGIT_REPO_URI="git://git.poez.io/${PN}"
+EGIT_REPO_URI="https://lab.louiz.org/poezio/${PN}.git"
 EGIT_MIN_CLONE_TYPE="mirror"
 
 DESCRIPTION="Python library for XMPP (branched from sleekxmpp)"
