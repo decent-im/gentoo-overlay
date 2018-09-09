@@ -15,7 +15,7 @@ net-im/prosody-modules luajit
 
 net-im/pidgin -xscreensaver gnutls
 
-net-im/spectrum debug libev purple skype smstools symlinks tools twitter irc migration
+net-im/spectrum debug libev purple skype smstools symlinks tools twitter migration
 net-im/libcommuni qt4
 
 net-im/prosody-modules prosody_modules_addressing prosody_modules_adhoc_account_management prosody_modules_adhoc_blacklist prosody_modules_admin_blocklist
