@@ -28,7 +28,7 @@ DEPEND=""
 # coturn was used with Ubuntu, but absent in Portage Tree and overlays
 RDEPEND="=net-im/prosody-9999
 =net-im/prosody-modules-9999
-=net-im/spectrum-9999
+net-im/spectrum2
 =net-im/biboumi-9999
 net-im/pidgin
 x11-plugins/purple-facebook
@@ -57,7 +57,7 @@ pkg_config() {
 	einfo "Updating rc to start ntpd, postgresql-9.5, prosody, spectrum on default runlevel ..."
 	rc-update add postgresql-9.5 default
 	rc-update add prosody default
-	rc-update add spectrum default
+	rc-update add spectrum2 default
 	rc-update add biboumi default
 	rc-update add ntpd default
 
@@ -78,7 +78,7 @@ pkg_config() {
 
 	einfo "Starting Prosody and Spectrum ..."
 	rc-service prosody start
-	rc-service spectrum start
+	rc-service spectrum2 start
 	rc-service biboumi start
 }
 
