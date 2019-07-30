@@ -50,7 +50,7 @@ net-im/prosody-modules **
 app-eselect/eselect-lua **
 # required by net-im/decent-im-9999::decent-im
 # required by decent-im (argument)
-net-im/spectrum **
+net-im/spectrum2
 # required by net-im/spectrum-9999::mva[irc]
 # required by net-im/decent-im-9999::decent-im
 # required by decent-im (argument)
