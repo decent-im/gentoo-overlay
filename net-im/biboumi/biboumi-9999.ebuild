@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -8,7 +8,7 @@ DESCRIPTION="Biboumi is an XMPP gateway that connects to IRC servers and transla
 HOMEPAGE="https://lab.louiz.org/louiz/biboumi"
 EGIT_REPO_URI="https://lab.louiz.org/louiz/biboumi.git"
 
-LICENSE="zlib"
+LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS=""
 IUSE="postgres sqlite"
