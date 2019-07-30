@@ -78,3 +78,5 @@ app-crypt/acme ~amd64
 x11-plugins/purple-facebook **
 
 net-im/coturn **
+
+net-im/biboumi **
