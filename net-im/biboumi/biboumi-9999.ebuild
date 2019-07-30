@@ -3,7 +3,7 @@
 
 EAPI=6
 
-DESCRIPTION="Biboumi is an XMPP gateway that connects to IRC servers and translates between the two protocols"
+DESCRIPTION="Biboumi is an XMPP gateway that connects to IRC servers"
 HOMEPAGE="https://lab.louiz.org/louiz/biboumi"
 EGIT_REPO_URI="https://lab.louiz.org/louiz/biboumi.git"
 
