@@ -15,12 +15,12 @@ IUSE="postgres sqlite"
 DEPEND="
 dev-libs/expat
 net-dns/c-ares
-net-dns/libidn
+net-dns/libidn:=
 net-im/jabber-base
-dev-libs/botan
+dev-libs/botan:=
 net-libs/udns
 virtual/libiconv
-postgres? ( dev-db/postgresql )
+postgres? ( dev-db/postgresql:= )
 sqlite? ( dev-db/sqlite )
 "
 RDEPEND="${DEPEND}"
