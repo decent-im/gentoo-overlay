@@ -49,37 +49,8 @@ pkg_postinst() {
 	if ! [[ -e "$ROOT/etc/decent.im/config" ]] ; then
 		elog
 		elog "To finish configuration of new setup, execute:"
-		elog "    emerge --config =${CATEGORY}/${PF}"
+		elog "    decent.im-postinst"
 	fi
-}
-
-pkg_config() {
-	einfo "Updating rc to start ntpd, postgresql-9.5, prosody, spectrum on default runlevel ..."
-	rc-update add postgresql-9.5 default
-	rc-update add prosody default
-	rc-update add spectrum2 default
-	rc-update add biboumi default
-	rc-update add ntpd default
-
-	einfo "Starting ntpd ..."
-	rc-service ntpd start
-
-	einfo "Generating decent.im config ..."
-	decent.im_configure
-
-	einfo "Processing software config templates ..."
-	decent.im_process_templates
-
-	einfo "Generating and populating TLS certs ..."
-	decent.im_letsencrypt
-
-	einfo "Creating databases and access credentials for Prosody and Spectrum ..."
-	decent.im_create_db_pg
-
-	einfo "Starting Prosody and Spectrum ..."
-	rc-service prosody start
-	rc-service spectrum2 start
-	rc-service biboumi start
 }
 
 pkg_preinst() {
