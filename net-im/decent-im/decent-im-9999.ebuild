@@ -24,9 +24,9 @@ KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND=""
-# TODO Add TURN server to RDEPEND
-# coturn was used with Ubuntu, but absent in Portage Tree and overlays
-RDEPEND="net-im/prosody
+RDEPEND="
+net-im/coturn
+net-im/prosody
 net-im/prosody-modules
 net-im/spectrum2
 =net-im/biboumi-9999
