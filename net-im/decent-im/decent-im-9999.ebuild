@@ -28,17 +28,16 @@ RDEPEND="
 net-im/coturn
 net-im/prosody
 net-im/prosody-modules
-net-im/spectrum2
-=net-im/biboumi-9999
-net-im/pidgin
-x11-plugins/purple-facebook
 www-servers/nginx
 app-crypt/certbot
 dev-db/postgresql
 net-dns/bind-tools
 app-portage/smart-live-rebuild
-sys-apps/kexec-tools
 net-misc/ntp
+sys-process/cronie
+app-admin/logrotate
+app-admin/syslog-ng
+app-emulation/qemu-guest-agent
 "
 
 src_install() {
