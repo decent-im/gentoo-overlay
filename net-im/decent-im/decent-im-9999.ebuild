@@ -38,6 +38,7 @@ sys-process/cronie
 app-admin/logrotate
 app-admin/syslog-ng
 app-emulation/qemu-guest-agent
+mail-mta/ssmtp[mta]
 "
 
 src_install() {
