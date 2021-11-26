@@ -39,6 +39,7 @@ app-admin/logrotate
 app-admin/syslog-ng
 app-emulation/qemu-guest-agent
 mail-mta/ssmtp[mta]
+net-firewall/nftables
 "
 
 src_install() {
