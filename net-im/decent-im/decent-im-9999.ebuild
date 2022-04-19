@@ -40,6 +40,7 @@ app-admin/syslog-ng
 app-emulation/qemu-guest-agent
 mail-mta/ssmtp[mta]
 net-firewall/nftables
+dev-lang/lua:5.4
 "
 
 src_install() {

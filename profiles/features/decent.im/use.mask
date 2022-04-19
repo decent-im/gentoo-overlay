@@ -2,3 +2,4 @@ X
 gtk
 gstreamer
 tcpd
+lua_single_target_lua5-1
