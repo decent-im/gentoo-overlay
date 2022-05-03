@@ -34,6 +34,7 @@ dev-db/postgresql
 net-dns/bind-tools
 app-portage/smart-live-rebuild
 net-misc/ntp
+sys-apps/moreutils
 sys-process/cronie
 app-admin/logrotate
 app-admin/syslog-ng
