@@ -1,7 +1,7 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
 DESCRIPTION="Biboumi is an XMPP gateway that connects to IRC servers"
 HOMEPAGE="https://lab.louiz.org/louiz/biboumi"
