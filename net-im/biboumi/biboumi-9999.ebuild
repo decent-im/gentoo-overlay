@@ -25,7 +25,7 @@ sqlite? ( dev-db/sqlite )
 "
 RDEPEND="${DEPEND}"
 
-inherit git-r3 cmake-utils
+inherit git-r3 cmake
 
 DIRS="/var/log/biboumi /var/lib/biboumi"
 
