@@ -25,23 +25,24 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
+app-admin/logrotate
+app-admin/syslog-ng
+app-crypt/certbot
+app-emulation/qemu-guest-agent
+app-portage/smart-live-rebuild
+dev-db/postgresql
+dev-lang/lua:5.4
+mail-mta/ssmtp[mta]
+net-dns/bind-tools
+net-firewall/nftables
 net-im/coturn
 net-im/prosody
 net-im/prosody-modules
-www-servers/nginx
-app-crypt/certbot
-dev-db/postgresql
-net-dns/bind-tools
-app-portage/smart-live-rebuild
 net-misc/ntp
 sys-apps/moreutils
+sys-fs/ncdu
 sys-process/cronie
-app-admin/logrotate
-app-admin/syslog-ng
-app-emulation/qemu-guest-agent
-mail-mta/ssmtp[mta]
-net-firewall/nftables
-dev-lang/lua:5.4
+www-servers/nginx
 "
 
 src_install() {
