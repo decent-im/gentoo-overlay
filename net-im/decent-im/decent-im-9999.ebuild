@@ -32,7 +32,7 @@ app-emulation/qemu-guest-agent
 app-portage/smart-live-rebuild
 dev-db/postgresql
 dev-lang/lua:5.4
-mail-mta/ssmtp[mta]
+mail-mta/nullmailer
 net-dns/bind-tools
 net-firewall/nftables
 net-im/coturn
