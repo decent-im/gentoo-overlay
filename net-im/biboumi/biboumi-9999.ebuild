@@ -37,11 +37,11 @@ src_configure() {
 		-DWITHOUT_SQLITE3="$(usex !sqlite)"
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 	newinitd "${FILESDIR}/${PN}".initd "${PN}"
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${PN}".logrotate "${PN}"
