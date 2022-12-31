@@ -25,6 +25,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
+app-admin/eclean-kernel
 app-admin/logrotate
 app-admin/syslog-ng
 app-crypt/certbot
