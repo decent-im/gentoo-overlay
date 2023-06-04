@@ -1,0 +1,2 @@
+# choose rust-bin
+dev-lang/rust
