@@ -30,6 +30,7 @@ app-admin/logrotate
 app-admin/syslog-ng
 app-crypt/certbot
 app-emulation/qemu-guest-agent
+app-portage/gentoolkit
 app-portage/smart-live-rebuild
 dev-db/postgresql
 dev-lang/lua:5.4
