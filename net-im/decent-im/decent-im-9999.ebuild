@@ -38,7 +38,7 @@ mail-mta/nullmailer
 net-dns/bind-tools
 net-firewall/nftables
 net-im/coturn
-net-im/prosody
+net-im/prosody[icu,-idn]
 net-im/prosody-modules
 net-misc/ntp
 sys-apps/moreutils
