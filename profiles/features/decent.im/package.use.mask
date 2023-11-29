@@ -1,1 +1,4 @@
 sys-apps/moreutils doc
+
+# to enable mod_mimicking
+net-im/prosody idn
