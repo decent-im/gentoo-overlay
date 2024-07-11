@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit eutils git-r3
+inherit git-r3
 
 DESCRIPTION="Prepared, cutting edge XMPP server configuration"
 
