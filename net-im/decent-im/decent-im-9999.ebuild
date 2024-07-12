@@ -34,6 +34,7 @@ app-portage/gentoolkit
 app-portage/smart-live-rebuild
 dev-db/postgresql
 dev-lang/lua:5.4
+dev-vcs/git
 mail-mta/nullmailer
 net-dns/bind-tools
 net-firewall/nftables
