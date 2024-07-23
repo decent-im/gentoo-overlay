@@ -1,5 +1,4 @@
-# not stabilized yet, 2024-07-12
-app-crypt/acme-sh-3.0.7
+app-crypt/acme-sh
 
 # not stabilized yet
 net-im/coturn
