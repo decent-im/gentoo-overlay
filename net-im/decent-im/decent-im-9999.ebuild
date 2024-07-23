@@ -38,6 +38,7 @@ dev-vcs/git
 mail-mta/nullmailer
 net-dns/bind-tools
 net-firewall/nftables
+net-im/biboumi
 net-im/coturn
 net-im/prosody[icu,-idn]
 net-im/prosody-modules
