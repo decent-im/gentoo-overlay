@@ -28,6 +28,7 @@ RDEPEND="
 app-admin/eclean-kernel
 app-admin/logrotate
 app-admin/syslog-ng
+app-crypt/acme-sh
 app-crypt/certbot
 app-emulation/qemu-guest-agent
 app-portage/gentoolkit
